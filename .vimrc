@@ -12,7 +12,7 @@ set cuc cul
 let mapleader = ","
 
 " Load Plug plugins
-source ./.vimrcplugins
+source ~/.vimrcplugins
 
 " Theme configuration
 set background=dark
