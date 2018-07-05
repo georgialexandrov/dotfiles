@@ -1,0 +1,26 @@
+" Plugins
+call plug#begin('~/.vim/plugged')
+" Syntax highlighter
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'elzr/vim-json'
+Plug 'kchmck/vim-coffee-script'
+" A collection of language packs for Vim
+Plug 'sheerun/vim-polyglot'
+" File system explorer for the Vim editor
+Plug 'scrooloose/nerdtree'
+" A Vim plugin which shows a git diff in the 'gutter'
+Plug 'airblade/vim-gitgutter'
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+" Show modified git files in NERDTree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Fuzzy search like Sublime Text
+Plug 'kien/ctrlp.vim'
+" Color theme
+Plug 'tomasr/molokai'
+" Every one should have a pair (Autogenerate pairs for "{[( )
+Plug 'jiangmiao/auto-pairs'
+" Lean & mean status/tabline for vim that's light as air.
+Plug 'vim-airline/vim-airline'
+call plug#end()

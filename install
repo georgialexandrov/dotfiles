@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+	echo "Downloading plugin manager (Plug). This may take a while ☕️"
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+cp ./.vimrcplugins ~/.vimrc
+cp ./.vimrcplugins ~/.vimrcplugins
+
+vim +PlugInstall +qa
+
+echo "Copying .vimrc"
+cp ./.vimrc ~/.vimrc
+
+echo "All done 🍺"
+
