@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
-	echo "Downloading plugin manager (Plug). This may take a while ☕️"
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  echo "Downloading plugin manager (Plug). This may take a while ☕️"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 cp ./.vimrcplugins ~/.vimrc
@@ -10,8 +10,17 @@ cp ./.vimrcplugins ~/.vimrcplugins
 
 vim +PlugInstall +qa
 
-echo "Copying .vimrc"
+if [ ! -d ~/.oh-my-zsh ]; then
+  echo "Downloading Oh My ZSH ☕️"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+echo "Copying dotfiles"
+cp ./.bash_profile ~/bash_profile
+cp ./.zshrc ~/.zshrc
 cp ./.vimrc ~/.vimrc
+
+source ~/.zshrc
 
 echo "All done 🍺"
 
