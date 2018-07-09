@@ -1,0 +1,16 @@
+scp ${process.env.HOME}/.ssh/id_rsa.pub ${config.mikrotik.default_username}@${config.mikrotik.default_ip}:/
+ssh ${config.mikrotik.default_username}@${config.mikrotik.default_ip} << EOF
+    interface ethernet set ${config.mikrotik.wan_interface} mac-address=${config.mikrotik.mac_address}
+
+    ip address add address=${config.mikrotik.ip_address}/${config.mikrotik.subnet_mask} interface=${config.mikrotik.wan_interface}
+
+    ip route add gateway=${config.mikrotik.gateway}
+
+    ip dns set servers=${config.mikrotik.dns_servers}
+
+    ${config.mikrotik.tcp_nat.map(line => `ip firewall nat add chain=dstnat action=dst-nat to-addresses=${config.mikrotik.nat_destination_ip} to-ports=${line} protocol=tcp in-interface=ether1 dst-port=${line} log=no\n`)}
+    ${config.mikrotik.udp_nat.map(line => `ip firewall nat add chain=dstnat action=dst-nat to-addresses=${config.mikrotik.nat_destination_ip} to-ports=${line} protocol=udp in-interface=ether1 dst-port=${line} log=no\n`)}
+
+    user add name=${process.env.LOGNAME} group=full comment="Username matching host machine's active user" disabled=no  
+    user ssh-keys import public-key-file=id_rsa.pub user=${process.env.LOGNAME}
+EOF

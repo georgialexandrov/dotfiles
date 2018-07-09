@@ -19,6 +19,8 @@ echo "Copying dotfiles"
 cp ./.bash_profile ~/bash_profile
 cp ./.zshrc ~/.zshrc
 cp ./.vimrc ~/.vimrc
+cp ./.gitignore_global ~/.gitignore_global
+node replacer.js ./.gitconfig > ~/.gitconfig
 
 source ~/.zshrc
 

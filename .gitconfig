@@ -1,0 +1,5 @@
+[core]
+	excludesfile = ${process.env.HOME}/.gitignore_global
+[user]
+	name = ${config.git.name}
+	email = ${config.git.email}
