@@ -8,6 +8,8 @@ set autoindent
 " Highlight the current line and active column
 set cursorline
 set cuc cul
+" Highlight search results
+set hlsearch
 
 let mapleader = ","
 
