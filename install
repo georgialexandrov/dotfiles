@@ -1,7 +1,30 @@
 #!/bin/bash
 
+if [ ! -d /usr/local/Homebrew ]; then
+  echo "Downloading Homebrew. This may take a while ☕️"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if [ ! -d ~/.rbenv ]; then
+  echo "Installing rbenv. This may take a while ☕️"
+  brew install rbenv
+  rbenv init
+  rbenv install 2.5.1
+  rbenv global 2.5.1
+fi
+
+if [ ! -d ~/.nvm ]; then
+  echo "Installing nvm. This may take a while ☕️"
+  brew install nvm
+  mkdir ~/.nvm
+  nvm install 8
+  nvm alias default 8
+fi
+
+
+
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
-  echo "Downloading plugin manager (Plug). This may take a while ☕️"
+  echo "Downloading vim plugin manager (Plug). This may take a while ☕️"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
@@ -17,6 +40,7 @@ fi
 
 echo "Copying dotfiles"
 cp ./.bash_profile ~/bash_profile
+cp ./.profile ~/.profile
 cp ./.zshrc ~/.zshrc
 cp ./.vimrc ~/.vimrc
 cp ./.gitignore_global ~/.gitignore_global
