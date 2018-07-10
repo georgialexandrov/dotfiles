@@ -10,6 +10,7 @@ if [ ! -d ~/.rbenv ]; then
   brew install rbenv
   rbenv init
   rbenv install 2.5.1
+  rbenv global 2.5.1
 fi
 
 if [ ! -d ~/.nvm ]; then
