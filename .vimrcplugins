@@ -23,4 +23,7 @@ Plug 'tomasr/molokai'
 Plug 'jiangmiao/auto-pairs'
 " Lean & mean status/tabline for vim that's light as air.
 Plug 'vim-airline/vim-airline'
+
+Plug 'vim-airline/vim-airline-themes'   " theme for airline
+
 call plug#end()

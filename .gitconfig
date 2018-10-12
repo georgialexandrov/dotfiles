@@ -3,3 +3,5 @@
 [user]
 	name = ${config.git.name}
 	email = ${config.git.email}
+[alias]
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ %Cgreen[%cn]\\ %C(yellow)[%cd]" --decorate --graph
