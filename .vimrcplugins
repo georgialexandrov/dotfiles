@@ -19,11 +19,17 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kien/ctrlp.vim'
 " Color theme
 Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
 " Every one should have a pair (Autogenerate pairs for "{[( )
 Plug 'jiangmiao/auto-pairs'
 " Lean & mean status/tabline for vim that's light as air.
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'   " theme for airline
+
+Plug 'dyng/ctrlsf.vim'
+Plug 'w0rp/ale'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/fzf'
 
 call plug#end()

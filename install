@@ -27,6 +27,15 @@ if [ ! -f ~/.vim/autoload/plug.vim ]; then
   echo "Downloading vim plugin manager (Plug). This may take a while ☕️"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+if [ ! -f ~/ls ~/Library/Fonts/Source\ Code\ Pro\ Black\ for\ Powerline.otf ]; then
+  echo "Downloading Powerline Fonts"
+  git clone https://github.com/powerline/fonts.git --depth=1
+  cd fonts
+  ./install.sh
+  cd ..
+  rm -rf fonts
+  echo "Fonts installation finished!"
+fi
 
 cp ./.vimrcplugins ~/.vimrc
 cp ./.vimrcplugins ~/.vimrcplugins

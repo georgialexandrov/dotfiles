@@ -21,7 +21,7 @@ set background=dark
 let g:molokai_original=1
 let g:rehash256=1
 set t_Co=256
-colorscheme molokai
+colorscheme molokai 
 
 " Show trailing whitespace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -34,6 +34,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " NERDTree width
 let g:NERDTreeWinSize = 60
+let NERDTreeShowHidden=1
 map <leader>n :NERDTreeToggle<cr>
 
 set timeoutlen=1000
@@ -60,10 +61,13 @@ set listchars=tab:▸·,eol:¬,trail:● " symbol settings for special character
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#bufferline#enabled = 1
-let g:airline_theme = 'cool'
 let g:airline#extensions#ale#enabled = 1
+let g:airline_solarized_bg='light'
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 set termencoding=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly:w
 
+autocmd BufEnter * lcd %:p:h "sync NERDTree files
+
+"
