@@ -47,6 +47,18 @@ if [ ! -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
+
+if [ ! -d ~/.bin ]; then
+  echo "Creating ~.bin directory"
+  mkdir ~/.bin
+fi
+
+
+if [ ! -f ~/.bin/tmuxinator.zsh ]; then
+  echo "Downloading tmuxinator auto complete"
+  curl https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh --output ~/.bin/tmuxinator.zsh
+fi
+
 echo "Copying dotfiles"
 cp ./.bash_profile ~/bash_profile
 cp ./.profile ~/.profile
