@@ -53,6 +53,13 @@ if [ ! -d ~/.bin ]; then
   mkdir ~/.bin
 fi
 
+if ! [ -x "$(command -v tmux)" ]; then
+  brew install tmux
+fi
+
+if ! [ -x "$(command -v tmuxinator)" ]; then
+  gem install tmuxinator
+fi
 
 if [ ! -f ~/.bin/tmuxinator.zsh ]; then
   echo "Downloading tmuxinator auto complete"

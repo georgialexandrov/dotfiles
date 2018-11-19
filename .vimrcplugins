@@ -31,5 +31,5 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'w0rp/ale'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf'
-
+Plug 'mileszs/ack.vim'
 call plug#end()

@@ -70,4 +70,5 @@ set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in
 
 autocmd BufEnter * lcd %:p:h "sync NERDTree files
 
-"
+let g:ackprg = 'ag --vimgrep'
+
