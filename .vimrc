@@ -6,8 +6,8 @@ set number
 " Copy the indentation from the previous line, when starting a new line
 set autoindent
 " Highlight the current line and active column
-set cursorline
-set cuc cul
+"set cursorline
+" :wset cuc cul
 " Highlight search results
 set hlsearch
 
@@ -17,11 +17,9 @@ let mapleader = ","
 source ~/.vimrcplugins
 
 " Theme configuration
-set background=dark
-let g:molokai_original=1
-let g:rehash256=1
-set t_Co=256
-colorscheme molokai 
+set background=light
+colorscheme solarized
+let g:solarized_termcolors=256
 
 " Show trailing whitespace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -36,8 +34,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 let g:NERDTreeWinSize = 60
 let NERDTreeShowHidden=1
 map <leader>n :NERDTreeToggle<cr>
-
-set timeoutlen=1000
 
 set ttimeoutlen=0
 
