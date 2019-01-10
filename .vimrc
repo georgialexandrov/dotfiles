@@ -18,8 +18,8 @@ source ~/.vimrcplugins
 
 " Theme configuration
 set background=light
-colorscheme solarized
 let g:solarized_termcolors=256
+colorscheme solarized
 
 " Show trailing whitespace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -62,7 +62,7 @@ let g:airline_solarized_bg='light'
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 set termencoding=utf-8
-set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly:w
+set guifont=Source\ Code\ Pro\ for\ Powerline
 
 autocmd BufEnter * lcd %:p:h "sync NERDTree files
 

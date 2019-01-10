@@ -18,18 +18,22 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Fuzzy search like Sublime Text
 Plug 'kien/ctrlp.vim'
 " Color theme
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
 " Every one should have a pair (Autogenerate pairs for "{[( )
 Plug 'jiangmiao/auto-pairs'
 " Lean & mean status/tabline for vim that's light as air.
 Plug 'vim-airline/vim-airline'
-
-Plug 'vim-airline/vim-airline-themes'   " theme for airline
-
+" theme for airline
+Plug 'vim-airline/vim-airline-themes'
+" An ack.vim alternative mimics Ctrl-Shift-F on Sublime Text 2
 Plug 'dyng/ctrlsf.vim'
 Plug 'w0rp/ale'
+" True Sublime Text style multiple selections for Vim
 Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf'
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 Plug 'mileszs/ack.vim'
 call plug#end()
