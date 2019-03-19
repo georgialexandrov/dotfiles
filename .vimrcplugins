@@ -15,8 +15,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 " Show modified git files in NERDTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Fuzzy search like Sublime Text
-Plug 'kien/ctrlp.vim'
 " Color theme
 " Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'

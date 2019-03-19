@@ -67,4 +67,22 @@ set guifont=Source\ Code\ Pro\ for\ Powerline
 autocmd BufEnter * lcd %:p:h "sync NERDTree files
 
 let g:ackprg = 'ag --vimgrep'
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
 
+" Go to tab by number
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+nnoremap <leader>0 :tablast<CR>
+
+nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <C-b> :Buffers<cr>
