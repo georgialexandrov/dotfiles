@@ -1,0 +1,31 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Nord",
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Fira Code', Monaco,Source Code Pro for Powerline,Menlo, 'Courier New', monospace",
+    "editor.wordWrapColumn": 120,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.minimap.enabled": false,
+    "workbench.fontAliasing": "antialiased",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.rulers": [
+        120
+    ],
+    "workbench.panel.defaultLocation": "right",
+    "workbench.editor.openPositioning": "left",
+    "editor.fontLigatures": true,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.pathToBundler": "~/.rbenv/versions/2.6.3/bin/bundler",
+    "ruby.useLanguageServer": true,
+    "ruby.interpreter.commandPath": "~/.rbenv/versions/2.6.3/bin/ruby",
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.formatOnType": true,
+    "html.format.enable": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.settings.editor": "json"
+}

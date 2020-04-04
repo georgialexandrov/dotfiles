@@ -1,0 +1,15 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "bin/rspec ${relativeFile}:${lineNumber}\n" },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "bin/rspec ${relativeFile}\n" },
+    "when": "editorTextFocus"
+  },
+]
