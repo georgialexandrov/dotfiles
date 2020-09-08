@@ -17,8 +17,8 @@ if [ ! -d ~/.nvm ]; then
   echo "Installing nvm. This may take a while ☕️"
   brew install nvm
   mkdir ~/.nvm
-  nvm install 8
-  nvm alias default 8
+  nvm install 12
+  nvm alias default 12
 fi
 
 
@@ -53,20 +53,8 @@ if [ ! -d ~/.bin ]; then
   mkdir ~/.bin
 fi
 
-if ! [ -x "$(command -v tmux)" ]; then
-  brew install tmux
-fi
-
-if ! [ -x "$(command -v tmuxinator)" ]; then
-  gem install tmuxinator
-fi
-
-if [ ! -f ~/.bin/tmuxinator.zsh ]; then
-  echo "Downloading tmuxinator auto complete"
-  curl https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh --output ~/.bin/tmuxinator.zsh
-fi
-
 echo "Copying dotfiles"
+cp ./.aliases ~/.aliases
 cp ./.bash_profile ~/bash_profile
 cp ./.profile ~/.profile
 cp ./.zshrc ~/.zshrc
