@@ -17,9 +17,9 @@ let mapleader = ","
 source ~/.vimrcplugins
 
 " Theme configuration
-set background=light
+"set background=light
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme nord
 
 " Show trailing whitespace and spaces before a tab:
 :highlight ExtraWhitespace ctermbg=red guibg=red
