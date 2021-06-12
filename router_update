@@ -1,3 +1,0 @@
-ssh ${process.env.LOGNAME}@${config.mikrotik.default_ip} << EOF
-    system package update install
-EOF
